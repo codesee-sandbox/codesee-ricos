@@ -1,22 +1,20 @@
+import { ProGallery } from 'pro-gallery';
+import images from './images';
+import 'pro-gallery/dist/statics/main.css';
+
+
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const container = {
+    width: 1000,
+    height: 500,
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <ProGallery container={container} items={images}/>
       </header>
     </div>
   );
